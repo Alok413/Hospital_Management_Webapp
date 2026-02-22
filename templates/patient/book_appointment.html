@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+</head>
+<body>
+    <h2>Book Appointment</h2>
+
+    <form method="POST">
+        <label>Date:</label><br>
+        <input type="date" name="date" required><br><br>
+
+        <label>Time:</label><br>
+
+        <select name="hour" required>
+            <option value="">Hour</option>
+            {% for h in range(1,13) %}
+            <option value="{{ h }}">{{ h }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="minute" required>
+            <option value="">Minute</option>
+            <option value="00">00</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="45">45</option>
+        </select>
+
+        <select name="ampm" required>
+            <option value="">AM/PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+
+        <br><br>
+
+
+        <button type="submit">Confirm Appointment</button>
+    </form>
+
+    <p style="color:green;">{{ message }}</p>
+
+    <br>
+    <a href="/patient/view_doctors">Back</a>
+</body>
+</html>

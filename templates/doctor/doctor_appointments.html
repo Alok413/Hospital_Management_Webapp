@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointments</title>
+</head>
+<body>
+
+    <h2>Your Appointments 🩺</h2>
+
+    <table border="1">
+        <tr>
+            <th>Patient Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        {% for appt in appointments %}
+        <tr>
+            <td>{{ appt[0] }}</td>
+            <td>{{ appt[1] }}</td>
+            <td>{{ appt[2] }}</td>
+            <td>{{ appt[3] }}</td>
+            <td>
+                <a href="/doctor/diagnose/{{ appt[4] }}">Diagnose</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br><br>
+    <a href="/doctor/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

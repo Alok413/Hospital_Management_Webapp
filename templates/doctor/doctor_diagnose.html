@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnosis Form</title>
+</head>
+<body>
+
+    <h2>Patient Diagnosis 🩺</h2>
+
+    <form method="POST">
+
+        <label>Visit Type:</label><br>
+        <select name="visit_type" required>
+            <option value="">Select</option>
+            <option value="In-person">In-person</option>
+            <option value="Online">Online</option>
+        </select>
+        <br><br>
+
+        <label>Test Done:</label><br>
+        <input type="text" name="test_done">
+        <br><br>
+
+        <label>Diagnosis:</label><br>
+        <textarea name="diagnosis" rows="4" cols="40" required></textarea>
+        <br><br>
+
+        <label>Prescription:</label><br>
+        <textarea name="prescription" rows="4" cols="40" required></textarea>
+        <br><br>
+
+        <button type="submit">Save Diagnosis</button>
+
+    </form>
+
+    <br><br>
+    <a href="/doctor/appointments">Back to Appointments</a>
+
+</body>
+</html>

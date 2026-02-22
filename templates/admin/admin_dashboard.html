@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome Admin 🎉</h1>
+
+    <h3>This is Admin Dashboard</h3>
+
+    <a href="/admin">Logout</a>
+    <br><br>
+    <a href="/admin/add_doctor">Add Doctor</a>
+    <br><br>
+    <h3>Dashboard Statistics</h3>
+
+<p>Total Doctors: {{ doctor_count }}</p>
+<p>Total Patients: {{ patient_count }}</p>
+<p>Total Appointments: {{ appointment_count }}</p>
+
+<a href="/admin/view_doctors">View Doctors</a>
+
+</body>
+</html>

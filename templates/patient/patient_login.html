@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Login</title>
+</head>
+<body>
+    <h2>Patient Login</h2>
+
+    <form method="POST">
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password" name="password" required>
+        <button type="button" onclick="togglePassword()" id="eyeBtn">👁️</button>
+        <br><br>
+
+        <button type="submit">Login</button>
+        <br><br>
+        <a href="/patient/forgot_password">Forgot Password?</a>
+    </form>
+
+    <p style="color:red;">{{ message }}</p>
+
+    <script>
+        function togglePassword() {
+            var x = document.getElementById("password");
+            var btn = document.getElementById("eyeBtn");
+
+            if (x.type === "password") {
+                x.type = "text";
+                btn.innerHTML = "🙈";
+            } else {
+                x.type = "password";
+                btn.innerHTML = "👁️";
+            }
+        }
+    </script>
+</body>
+</html>
